@@ -1,5 +1,5 @@
 import pytest
-from src.cart import Cart, EmptyCartError
+from cart import Cart, EmptyCartError
 
 def test_empty_cart_raises():
     with pytest.raises(EmptyCartError):
@@ -13,7 +13,7 @@ def test_negative_price_rejected():
     cart = Cart()
     with pytest.raises(ValueError, match="price must be"):
         cart.add("book", -100)
-        
+
 # import logging
 
 
